@@ -1,7 +1,10 @@
-import React from 'react'
+import React , { useState } from 'react'
 
 const Input = (props) => {
   
+  const [inputValue, setInputValue] = useState('');
+
+
   return (
     <div className = 'tasks'>
       <label>Input Task: </label>

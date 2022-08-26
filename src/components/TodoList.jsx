@@ -14,16 +14,22 @@ const TodoList = () => {
   const addTask = () =>{
     let myList = [...tasks, 'My Task'];
     manageTasks(myList)
-    console.log(tasks)
   }
 
   const handleChange = (event)=> {}
+
+  const removeTask = (index) => {
+    let taskList = [...tasks]
+    taskList.splice(index,1)
+    manageTasks(taskList)
+  }
 
   return (
     <div className="list">
       <Input handleChange = {handleChange} 
              addTask = {addTask} />
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} 
+             removeTask = {removeTask}/>
     </div>
   )
 }
