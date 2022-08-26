@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Input = () => {
+const Input = (props) => {
   
   return (
-    <div>
+    <div className = 'tasks'>
       <label>Input Task: </label>
       <input type="text" name="task" />
-      <button>Add</button>
+      <button onClick = {props.addTask}>Add</button>
     </div>
   )
 }
