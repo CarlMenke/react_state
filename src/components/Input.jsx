@@ -7,7 +7,7 @@ const Input = (props) => {
 
   return (
     <div className = 'tasks'>
-      <label>Input Task: </label>
+      <label>Input Tasks Here: </label>
       <input type="text" name="task" />
       <button onClick = {props.addTask}>Add</button>
     </div>
